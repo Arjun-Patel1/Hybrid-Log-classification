@@ -1,0 +1,7 @@
+log_message,predicted_label
+User User123 logged in.,User Action
+Backup completed successfully.,System Notification
+Multiple login failures occurred on user 6454 account,Security Alert
+Unexpected shutdown detected in system A-34.,Uncertain
+"Hey bro, chill ya!",Uncertain
+System updated to version 3.5.1,System Notification

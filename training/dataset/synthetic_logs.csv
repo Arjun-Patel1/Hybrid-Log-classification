@@ -1,0 +1,20 @@
+timestamp,source,log_message,target_label,complexity,predicted_label
+2025-06-27 07:20:25,ModernCRM,nova.osapi_compute.wsgi.server [...] status: 200 len: 1893 time: 0.2675118,HTTP Status,bert,HTTP Status
+2025-01-14 23:07:00,ModernCRM,Email service experiencing issues with sending,Critical Error,bert,Uncertain
+2025-01-17 01:29:00,AnalyticsEngine,Unauthorized access to data was attempted,Security Alert,bert,Security Alert
+2025-07-12 00:24:16,ModernHR,nova.osapi_compute.wsgi.server [...] HTTP status code - 200,HTTP Status,bert,HTTP Status
+2025-06-02 18:25:23,BillingSystem,nova.osapi_compute.wsgi.server [...] RCODE 200,HTTP Status,bert,HTTP Status
+2025-10-09 10:30:31,ModernHR,nova.osapi_compute.wsgi.server [...] Return code: 200,HTTP Status,bert,HTTP Status
+2025-03-01 19:14:00,ModernHR,Shard 6 replication task ended in failure,Error,bert,Error
+2025-10-11 08:44:00,ModernHR,File data_6169.csv uploaded successfully by user User953.,System Notification,regex,System Notification
+2025-02-12 10:42:29,ThirdPartyAPI,"nova.compute.claims [...] Total memory: 64172 MB, used: 512.00 MB",Resource Usage,bert,Resource Usage
+2025-03-30 04:01:45,ModernHR,nova.osapi_compute.wsgi.server [...] RCODE 200,HTTP Status,bert,HTTP Status
+2025-08-09 18:58:00,ModernCRM,Email server encountered a sending fault,Error,bert,Uncertain
+2025-06-15 11:44:00,ModernHR,Critical system unit error: unit ID Component55,Critical Error,bert,Uncertain
+2025-07-12 03:03:18,ModernHR,nova.osapi_compute.wsgi.server [...] status: 200,HTTP Status,bert,HTTP Status
+2025-08-04 19:57:00,ThirdPartyAPI,Multiple bad login attempts detected on user 8538 account,Security Alert,bert,Security Alert
+2025-01-04 01:43:00,ThirdPartyAPI,File data_3847.csv uploaded successfully by user User175.,System Notification,regex,System Notification
+2025-05-01 09:41:00,ModernCRM,Backup completed successfully.,System Notification,regex,System Notification
+2025-11-15 14:48:30,BillingSystem,nova.osapi_compute.wsgi.server [...] Status code - 200,HTTP Status,bert,HTTP Status
+2025-01-27 12:39:05,ModernCRM,nova.osapi_compute.wsgi.server [...] RCODE 200,HTTP Status,bert,HTTP Status
+2025-02-22 17:49:00,ModernCRM,Account with ID 5351 created by User634.,User Action,regex,User Action
