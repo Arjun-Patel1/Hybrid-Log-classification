@@ -138,12 +138,6 @@ Multiple login failures occurred...,Security Alert
 
 ---
 
-## 🔒 Disclaimer
-
-This project is for educational purposes only.
-
-© 2025 @Codebasics Inc | @LearnerX Pvt Ltd. All rights reserved.
-
 Developed and maintained by Arjun Patel
 
 
