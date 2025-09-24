@@ -1,6 +1,6 @@
 # live working :-
 https://arjun-patel1-hybrid-log-classification-app-xjjjfl.streamlit.app/
-```markdown
+
 # 🚀 Hybrid Log Classification Framework
 
 A robust and extensible framework for log classification that combines rule-based techniques with modern machine learning. Accurately classify both structured and unstructured log data, supporting analytics, monitoring, and security workflows.
@@ -19,11 +19,9 @@ A robust and extensible framework for log classification that combines rule-base
 - **Customizable**
   - Easily extend regex rules or retrain the ML model for your needs
 
----
 
 ## 🏗️ Project Structure
 
-```
 Hybrid-Log-classification/
 ├── processor_regex.py         # Regex-based classification logic
 ├── processor_e5.py            # Embedding + classifier logic
@@ -41,9 +39,7 @@ Hybrid-Log-classification/
 ├── notebooks/
 │   └── training_notebook.ipynb
 └── requirements.txt
-```
 
----
 
 ## 🛠️ Setup
 
