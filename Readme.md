@@ -1,64 +1,20 @@
-# 🚀 Log Classification with Hybrid Classification Framework
+🚀 Hybrid Log Classification Framework
+A powerful, extensible system for log classification that blends rule-based and state-of-the-art machine learning techniques. Designed for both structured and unstructured log data, this project delivers exceptional accuracy and flexibility for modern log analysis needs.
 
-This project implements a **hybrid log classification system** that combines two intelligent methods:
-
-* **Regex-based classification** for structured patterns
-* **Transformer (E5-small-v2) + Logistic Regression** for complex log messages
-
-The aim is to accurately label logs by leveraging the strengths of both rule-based and ML-based approaches.
-
----
-
-## 🔍 Classification Approaches
-
-### 1. 🔤 Regular Expression (Regex)
-
-* Best for predictable log formats such as:
-
-  * Login events
-  * Backup completion
-  * System updates
-* Provides fast and deterministic classification.
-
-### 2. 🧠 Sentence Transformer (E5-small-v2) + Logistic Regression
-
-* Handles unstructured and semi-structured logs.
-* Converts messages to embeddings using E5-small-v2.
-* Applies Logistic Regression to classify logs based on trained patterns.
-
----
-
-## 📊 Evaluation Results
-
-| Label          | Precision | Recall | F1-score | Support |
-| -------------- | --------- | ------ | -------- | ------- |
-| Critical Error | 0.90      | 1.00   | 0.95     | 46      |
-| Error          | 0.98      | 0.87   | 0.92     | 47      |
-| HTTP Status    | 1.00      | 1.00   | 1.00     | 316     |
-| Resource Usage | 1.00      | 1.00   | 1.00     | 46      |
-| Security Alert | 0.99      | 0.99   | 0.99     | 114     |
-| User Action    | 1.00      | 1.00   | 1.00     | 32      |
-
-**Overall Accuracy:** `99%`
-
-**Macro F1-score:** `0.98`
-
-**Weighted F1-score:** `0.99`
-
-![Confusion Matrix](resources/classification_metrics_heatmap.png)
-
----
-
-## 📁 Folder Structure
-
-```bash
+🧩 Key Features
+Hybrid Classification: Combines precise Regex-based rules with robust ML (Sentence Transformer + Logistic Regression) for best-in-class results.
+Customizable: Easily extend regular expressions or retrain the ML model for your unique log sources.
+High Accuracy: Achieves 99% overall accuracy and 0.99 weighted F1-score (see the results below).
+API & CLI: Use via simple command-line scripts or spin up a FastAPI server for integration with your tools.
+🏗️ Project Structure
+Code
 log_classifier_project/
 ├── processor_regex.py       # Rule-based classification
 ├── processor_e5.py          # Embedding + classifier logic
-├── hybrid_classifier.py     # Combined hybrid logic
+├── hybrid_classifier.py     # Hybrid logic controller
 ├── classify.py              # CLI-based classification
-├── train_model.py           # Training script
-├── server.py                # FastAPI server (optional)
+├── train_model.py           # Model training scripts
+├── server.py                # FastAPI app (optional)
 ├── models/
 │   └── log_classifier.joblib
 ├── data/
@@ -69,75 +25,63 @@ log_classifier_project/
 ├── notebooks/
 │   └── training_notebook.ipynb
 └── requirements.txt
-```
+💡 How It Works
+1. Regex Classification
+Best For: Clearly structured patterns (e.g., login events, backups, system updates).
+Benefits: Fast, deterministic, and easy to extend for known log types.
+2. Transformer (E5-small-v2) + Logistic Regression
+Best For: Unstructured or semi-structured logs.
+How: Transforms log text into embeddings, then classifies using a trained logistic regression model.
+📊 Performance
+Label	Precision	Recall	F1-score	Support
+Critical Error	0.90	1.00	0.95	46
+Error	0.98	0.87	0.92	47
+HTTP Status	1.00	1.00	1.00	316
+Resource Usage	1.00	1.00	1.00	46
+Security Alert	0.99	0.99	0.99	114
+User Action	1.00	1.00	1.00	32
+Overall Accuracy: 99%
+Macro F1-score: 0.98
+Weighted F1-score: 0.99
 
----
+![Confusion Matrix](resources/classification_metrics_heatmap.png)
 
-## ⚙️ Setup Instructions
+⚙️ Installation & Setup
+Clone the Repository
 
-### 1. Clone the Repository
+bash
+git clone https://github.com/Arjun-Patel1/Hybrid-Log-classification.git
+cd Hybrid-Log-classification
+Install Dependencies
 
-```bash
-git clone https://github.com/your-username/log-classifier.git
-cd log-classifier
-```
-
-### 2. Install Dependencies
-
-```bash
+bash
 pip install -r requirements.txt
-```
-
-Make sure to have the following installed:
-
-* `sentence-transformers`
-* `scikit-learn`
-* `fastapi`
-* `uvicorn`
-* `python-multipart`
-
----
-
-## 🚪 Run the App
-
-### 🔹 CLI Classification
-
-```bash
+Required packages: sentence-transformers, scikit-learn, fastapi, uvicorn, python-multipart
+🚀 Usage
+CLI Classification
+bash
 python classify.py
-```
-
-### 🌐 Start FastAPI Server
-
-```bash
+Start FastAPI Server
+bash
 uvicorn server:app --reload
-```
+API Docs: http://127.0.0.1:8000/docs
+ReDoc: http://127.0.0.1:8000/redoc
+📝 Example Data
+Input CSV:
 
-Visit these endpoints:
-
-* Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-* ReDoc: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
-
----
-
-## 📃 Example Input CSV Format
-
-```
+Code
 timestamp,source,log_message
 2025-06-27 07:20:25,ModernCRM,"Email service experiencing issues with sending"
 2025-07-12 00:24:16,ModernHR,"nova.osapi_compute.wsgi.server ... status: 200"
-```
-
 Output CSV:
 
-```
+Code
 log_message,predicted_label
 User User123 logged in.,User Action
 Backup completed successfully.,System Notification
 Multiple login failures occurred...,Security Alert
-```
+🙌 Contributions
+Feel free to fork, submit issues, and contribute improvements! For major changes, open an issue first to discuss what you’d like to change.
 
----
-
+👤 Author
 Developed and maintained by Arjun Patel
-
-
