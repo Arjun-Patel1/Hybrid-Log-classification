@@ -133,5 +133,3 @@ Contributions are welcome! Please open issues or pull requests for improvements,
 Developed and maintained by **Arjun Patel**.
 
 ```
-
-Just copy everything inside the code block and paste it into your `Readme.md` file! If you want this pushed to your repo automatically, just let me know.
